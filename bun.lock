@@ -4,14 +4,12 @@
     "": {},
     "bun-plugin-nestjs": {
       "name": "@pmb0/bun-plugin-nestjs",
-      "version": "0.0.0",
+      "version": "1.0.2",
       "dependencies": {
         "debug": "^4.4.0",
       },
       "devDependencies": {
         "@types/bun": "^1.1.14",
-      },
-      "peerDependencies": {
         "typescript": "^5.7.2",
       },
     },
@@ -106,7 +104,7 @@
 
     "@pkgjs/parseargs": ["@pkgjs/parseargs@0.11.0", "", {}, "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="],
 
-    "@pmb0/bun-plugin-nestjs": ["@pmb0/bun-plugin-nestjs@workspace:bun-plugin-nestjs", { "dependencies": { "debug": "^4.4.0" }, "devDependencies": { "@types/bun": "^1.1.14" }, "peerDependencies": { "typescript": "^5.7.2" } }],
+    "@pmb0/bun-plugin-nestjs": ["@pmb0/bun-plugin-nestjs@workspace:bun-plugin-nestjs", { "dependencies": { "debug": "^4.4.0" }, "devDependencies": { "@types/bun": "^1.1.14", "typescript": "^5.7.2" } }],
 
     "@scarf/scarf": ["@scarf/scarf@1.4.0", "", {}, "sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ=="],
 
