@@ -6,7 +6,8 @@
   "homepage": "https://github.com/pmb0/bun-plugin-nestjs/tree/main/bun-plugin-nestjs",
   "scripts": {
     "build": "bun build ./index.ts --outfile=index.js",
-    "build:watch": "bun run build --watch"
+    "build:watch": "bun run build --watch",
+    "prepublishOnly": "bun run build"
   },
   "exports": {
     ".": "./index.js"
