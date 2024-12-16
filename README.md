@@ -1,2 +1,1 @@
-# bun-plugin-nestjs
-
+bun-plugin-nestjs/README.md

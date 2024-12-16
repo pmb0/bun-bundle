@@ -13,7 +13,7 @@ Other potential issues may arise depending on the specific tools or structure of
 Add `@pmb0/bun-plugin-nestjs` to your dependencies.
 
 ```bash
-bun add @pmb0/bun-plugin-nestjs
+bun add --dev @pmb0/bun-plugin-nestjs
 ```
 
 Create a bun build script:
