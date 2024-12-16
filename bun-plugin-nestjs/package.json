@@ -1,11 +1,11 @@
 {
   "name": "@pmb0/bun-plugin-nestjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "A Bun plugin that simplifies bundling NestJS applications by addressing issues with optional dependencies and missing Nest CLI compiler plugins, ensuring a smoother bundling process",
   "homepage": "https://github.com/pmb0/bun-plugin-nestjs/tree/main/bun-plugin-nestjs",
   "scripts": {
-    "build": "bun build ./index.ts --outfile=index.js",
+    "build": "bun build ./index.ts --no-bundle --outfile=index.js",
     "build:watch": "bun run build --watch",
     "prepublishOnly": "bun run build"
   },
