@@ -1,15 +1,22 @@
 {
   "name": "@pmb0/bun-plugin-nestjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
-  "module": "index.ts",
+  "description": "A Bun plugin that simplifies bundling NestJS applications by addressing issues with optional dependencies and missing Nest CLI compiler plugins, ensuring a smoother bundling process",
+  "scripts": {
+    "build": "bun build ./index.ts --outfile=index.js",
+    "build:watch": "bun run build --watch"
+  },
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.js"
   },
   "devDependencies": {
     "@types/bun": "^1.1.14"
   },
   "peerDependencies": {
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "debug": "^4.4.0"
   }
 }

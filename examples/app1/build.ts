@@ -2,12 +2,17 @@ import { NestPlugin } from "@pmb0/bun-plugin-nestjs";
 
 const out = await Bun.build({
   entrypoints: ["./src/main.ts"],
-  sourcemap: "external",
-  target: "node",
-  packages: "bundle",
   format: "esm",
-  outdir: "/tmp/test",
+  minify: {
+    identifiers: false,
+    syntax: true,
+    whitespace: true,
+  },
+  outdir: "./out",
+  packages: "bundle",
   plugins: [NestPlugin],
+  sourcemap: "linked",
+  target: "node",
 });
 
-console.log("Build done", out.success ? "Done" : out);
+console.log("Build done", out.success ? "Success" : out);
