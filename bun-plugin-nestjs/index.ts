@@ -1,8 +1,4 @@
 import type { BunPlugin } from "bun";
-import debug_ from "debug";
-
-const debug = debug_("bun-plugin-nest:debug");
-const info = debug_("bun-plugin-nest:info");
 
 function isDependencyInstalled(name: string, resolveDir: string) {
   try {
@@ -17,7 +13,7 @@ export const NestPlugin: BunPlugin = {
   name: "bun-plugin-nest",
   setup(build) {
     build.onStart(() => {
-      info("Dynamically setting NestJS externals");
+      console.log("Dynamically setting NestJS externals");
     });
 
     build.onResolve({ filter: /.*/, namespace: "file" }, (args) => {
@@ -29,7 +25,7 @@ export const NestPlugin: BunPlugin = {
           args.resolveDir as string
         )
       ) {
-        debug("Add external:", args.path, args.importer);
+        console.log("Add external:", args.path, args.importer);
         return {
           external: true,
           path: args.path,
@@ -38,7 +34,7 @@ export const NestPlugin: BunPlugin = {
         args.importer.includes("@nestjs/") &&
         !args.path.startsWith(".")
       ) {
-        // info("Resolve:", args.path, args.importer);
+        // console.log("Resolve:", args.path, args.importer);
       }
     });
   },
