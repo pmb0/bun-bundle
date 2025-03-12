@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",
-    "@pmb0/bun-plugin-nestjs": "workspace:*",
+    "bun-plugin-optional-deps": "workspace:*",
     "@types/bun": "^1.1.14",
     "@types/debug": "^4.1.12",
     "typescript": "^5.7.2"

@@ -3,7 +3,11 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "bun-plugin-nestjs",
+    "bun-plugin-optional-deps",
+    "bundle-cli",
     "examples/*"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
 }

@@ -1,4 +1,4 @@
-import { NestPlugin } from "@pmb0/bun-plugin-nestjs";
+import { NestPlugin } from "bun-plugin-optional-deps";
 
 const out = await Bun.build({
   entrypoints: ["./src/main.ts"],
