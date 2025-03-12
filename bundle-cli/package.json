@@ -1,16 +1,16 @@
 {
   "name": "@pmb0/bundle",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "type": "module",
   "homepage": "https://github.com/pmb0/bun-plugin-nestjs/tree/main/bundle-cli",
   "scripts": {
-    "build": "bun --bun tsc",
+    "build": "bun --bun tsc --noEmit && bun build index.ts --target bun --outfile index.js",
     "build:watch": "bun run build --watch",
     "clean": "rm *.d.ts *.js",
     "prepublishOnly": "bun run build"
   },
   "bin": {
-    "bundle": "./index.ts"
+    "bundle": "bin/bundle"
   },
   "devDependencies": {
     "@types/bun": "^1.1.14",
