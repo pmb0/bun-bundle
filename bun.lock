@@ -17,6 +17,22 @@
         "typescript": "^5.7.2",
       },
     },
+    "bundle-cli": {
+      "name": "@pmb0/bundle",
+      "version": "1.0.6",
+      "bin": {
+        "bundle": "bin/bundle",
+      },
+      "dependencies": {
+        "@types/node": "^22.13.10",
+        "commander": "^13.1.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.1.14",
+        "bun-plugin-optional-deps": "workspace:*",
+        "typescript": "^5.7.2",
+      },
+    },
     "examples/app1": {
       "name": "app1",
       "dependencies": {
@@ -49,22 +65,6 @@
         "@types/bun": "latest",
       },
       "peerDependencies": {
-        "typescript": "^5.7.2",
-      },
-    },
-    "nest-cli": {
-      "name": "@pmb0/nest",
-      "version": "1.0.0",
-      "bin": {
-        "bundle": "./index.ts",
-      },
-      "dependencies": {
-        "@types/node": "^22.13.10",
-        "commander": "^13.1.0",
-      },
-      "devDependencies": {
-        "@types/bun": "^1.1.14",
-        "bun-plugin-optional-deps": "workspace:*",
         "typescript": "^5.7.2",
       },
     },
@@ -124,7 +124,7 @@
 
     "@pkgjs/parseargs": ["@pkgjs/parseargs@0.11.0", "", {}, "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="],
 
-    "@pmb0/nest": ["@pmb0/nest@workspace:nest-cli"],
+    "@pmb0/bundle": ["@pmb0/bundle@workspace:bundle-cli"],
 
     "@scarf/scarf": ["@scarf/scarf@1.4.0", "", {}, "sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ=="],
 

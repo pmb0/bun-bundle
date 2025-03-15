@@ -1,16 +1,17 @@
 import type { BunPlugin } from "bun";
 import path from "path";
 import fs from "fs";
+import { createRequire } from "module";
 
 function log(...args: any[]) {
-  if (process.env.BUN_PLUGIN_NESTJS_DEBUG) {
+  if (process.env.BUN_BUNDLE_DEBUG) {
     console.log(...args);
   }
 }
 
 function isDependencyInstalled(name: string, resolveDir: string) {
   try {
-    Bun.resolveSync(normalizePackageName(name), resolveDir);
+    Bun.resolveSync(name, resolveDir);
     return true;
   } catch (e) {
     return false;
@@ -81,9 +82,14 @@ export const OptionalDepsPlugin: BunPlugin = {
     });
 
     build.onResolve({ filter: /.*/, namespace: "file" }, async (args) => {
+      const isInstalled = isDependencyInstalled(args.path, args.resolveDir);
+
+      if (isInstalled) {
+        return;
+      }
+
       if (
-        (!args.path.startsWith(".") &&
-          !isDependencyInstalled(args.path, args.resolveDir)) ||
+        !args.path.startsWith(".") ||
         isDepOptional(args.path, args.resolveDir)
       ) {
         log("Add external:", args.path, args.importer);
