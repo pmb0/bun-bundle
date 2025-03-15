@@ -1,6 +1,6 @@
 {
   "name": "@pmb0/bundle",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "homepage": "https://github.com/pmb0/bun-plugin-nestjs/tree/main/bundle-cli",
   "scripts": {
