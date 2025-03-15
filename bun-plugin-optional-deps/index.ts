@@ -1,7 +1,6 @@
 import type { BunPlugin } from "bun";
 import path from "path";
 import fs from "fs";
-import { createRequire } from "module";
 
 function log(...args: any[]) {
   if (process.env.BUN_BUNDLE_DEBUG) {
@@ -80,7 +79,6 @@ export const OptionalDepsPlugin: BunPlugin = {
     build.onStart(() => {
       log("Dynamically setting optional-require externals");
     });
-
     build.onResolve({ filter: /.*/, namespace: "file" }, async (args) => {
       const isInstalled = isDependencyInstalled(args.path, args.resolveDir);
 
