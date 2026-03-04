@@ -1,4 +1,4 @@
-import { NestPlugin } from "bun-plugin-optional-deps";
+import { OptionalDepsPlugin } from "bun-plugin-optional-deps";
 
 const out = await Bun.build({
   entrypoints: ["./src/main.ts"],
@@ -10,7 +10,7 @@ const out = await Bun.build({
   },
   outdir: "./out",
   packages: "bundle",
-  plugins: [NestPlugin],
+  plugins: [OptionalDepsPlugin],
   sourcemap: "linked",
   target: "node",
 });
