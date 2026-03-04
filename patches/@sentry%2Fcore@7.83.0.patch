@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index 0065294cb2c931ae52f49a4b3f5e2e0b7b2f2032..725ba9f72d348659a5e665a000a26c04687980bc 100644
+--- a/package.json
++++ b/package.json
+@@ -25,6 +25,5 @@
+   "dependencies": {
+     "@sentry/types": "7.83.0",
+     "@sentry/utils": "7.83.0"
+-  },
+-  "sideEffects": false
++  }
+ }
+\ No newline at end of file

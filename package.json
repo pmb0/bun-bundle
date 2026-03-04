@@ -10,5 +10,13 @@
   "devDependencies": {
     "prettier": "^3.8.1"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "patchedDependencies": {
+    "@sentry/core@7.83.0": "patches/@sentry%2Fcore@7.83.0.patch",
+    "@sentry/utils@7.83.0": "patches/@sentry%2Futils@7.83.0.patch",
+    "@sentry/node@7.83.0": "patches/@sentry%2Fnode@7.83.0.patch",
+    "@sentry-internal/tracing@7.83.0": "patches/@sentry-internal%2Ftracing@7.83.0.patch",
+    "@sentry/integrations@7.83.0": "patches/@sentry%2Fintegrations@7.83.0.patch",
+    "@sentry/types@7.83.0": "patches/@sentry%2Ftypes@7.83.0.patch"
+  }
 }

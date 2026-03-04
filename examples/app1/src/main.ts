@@ -1,8 +1,22 @@
-import { NestFactory } from "@nestjs/core";
-import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
-import { AppModule } from "./app.module.js";
 import { ValidationPipe } from "@nestjs/common";
+import { NestFactory } from "@nestjs/core";
+import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { Transport, type MicroserviceOptions } from "lib1";
+import { AppModule } from "./app.module.js";
+import * as Integrations from "@sentry/integrations";
+import * as Sentry from "@sentry/node";
+import * as Tracing from "@sentry/tracing";
+import type { SamplingContext, Transaction } from "@sentry/types";
+
+Sentry.init({
+  integrations: [
+    new Sentry.Integrations.Http({ tracing: true }),
+    new Tracing.Integrations.Mongo(),
+    new Integrations.ExtraErrorData(),
+  ],
+});
+
+console.log("Sentry OK, NodeClient:", Sentry.NodeClient.name);
 
 const app = await NestFactory.create(AppModule);
 

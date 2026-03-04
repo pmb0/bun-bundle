@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index 8afeb78cf549631aa9c436e60a6b0d4ab6677ddc..4e6b18582f7165d08476fef138d62508407aaadf 100644
+--- a/package.json
++++ b/package.json
+@@ -21,6 +21,5 @@
+   },
+   "publishConfig": {
+     "access": "public"
+-  },
+-  "sideEffects": false
++  }
+ }

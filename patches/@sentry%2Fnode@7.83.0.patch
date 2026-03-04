@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index 45b036ebd6f6972c99bad962e0157ab55ceba873..aec37fed15b8447d1e9d6209a465f8af458a1b3f 100644
+--- a/package.json
++++ b/package.json
+@@ -44,6 +44,5 @@
+         "skipTypeImports": true
+       }
+     }
+-  },
+-  "sideEffects": false
++  }
+ }
+\ No newline at end of file

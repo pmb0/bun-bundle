@@ -1,0 +1,23 @@
+diff --git a/Users/pmb/work.private/bun-bundle/node_modules/@sentry/integrations/.bun-tag-e29d594345dd26b9 b/.bun-tag-e29d594345dd26b9
+new file mode 100644
+index 0000000000000000000000000000000000000000..e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+diff --git a/package.json b/package.json
+index 53fdfbd6412658171ff89136641e5a7d90defa35..d24161d83b7f7f4d1e6eb0a758d269228c12069d 100644
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,6 @@
+   "name": "@sentry/integrations",
+   "version": "7.83.0",
+   "description": "Pluggable integrations that can be used to enhance JS SDKs",
+-  "repository": "git://github.com/getsentry/sentry-javascript.git",
+   "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/integrations",
+   "author": "Sentry",
+   "license": "MIT",
+@@ -31,6 +30,5 @@
+   "devDependencies": {
+     "@sentry/browser": "7.83.0",
+     "chai": "^4.1.2"
+-  },
+-  "sideEffects": false
++  }
+ }

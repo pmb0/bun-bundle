@@ -10,6 +10,7 @@ const out = await Bun.build({
   },
   outdir: "./out",
   packages: "bundle",
+  compile: true,
   plugins: [OptionalDepsPlugin],
   sourcemap: "linked",
   target: "node",

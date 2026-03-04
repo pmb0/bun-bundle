@@ -79,23 +79,21 @@ export const OptionalDepsPlugin: BunPlugin = {
     build.onStart(() => {
       log("Dynamically setting optional-require externals");
     });
-    build.onResolve({ filter: /.*/, namespace: "file" }, async (args) => {
-      const isInstalled = isDependencyInstalled(args.path, args.resolveDir);
+    build.onResolve(
+      { filter: /^[^.]/, namespace: "file" },
+      async (args) => {
+        const isInstalled = isDependencyInstalled(args.path, args.resolveDir);
 
-      if (isInstalled) {
-        return;
-      }
+        if (isInstalled) {
+          return;
+        }
 
-      if (
-        !args.path.startsWith(".") ||
-        isDepOptional(args.path, args.resolveDir)
-      ) {
         log("Add external:", args.path, args.importer);
         return {
           external: true,
           path: args.path,
         };
-      }
-    });
+      },
+    );
   },
 };
